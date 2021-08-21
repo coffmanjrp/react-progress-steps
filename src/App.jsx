@@ -11,10 +11,10 @@ function App() {
       <div className="progress-container">
         <div className="progress" style={{ width: `${progressbar}%` }} />
         {steps.length > 0 &&
-          steps.map((step) => (
+          steps.map((step, index) => (
             <div
-              key={step}
-              className={`circle${step <= current ? ' active' : ''}`}
+              key={index}
+              className={`circle${index + 1 <= current ? ' active' : ''}`}
             >
               {step}
             </div>
